@@ -1,0 +1,18 @@
+[project]
+name = "fixed_axes"
+version = "0.1.0-dev" # also update _version.py
+authors = [{ name = "Max Kircher" }]
+description = """
+    A matplotlib layout engine for fixed-size axes.
+"""
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: MIT",
+    "Operating System :: OS Independent",
+]
+dependencies = ["numpy", "matplotlib"]
+
+[project.urls]
+"Repository" = "https://github.com/frekm/fixed-axes"
