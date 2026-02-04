@@ -5,13 +5,13 @@ from matplotlib.figure import Figure, SubFigure
 
 from typing import Literal, cast
 
-from .engine import FixedAxesLayoutEngine
-
 MM_PER_INCH = 25.4
 
 
 def set_axes_size(
-    size: tuple[float, float], ax: Axes | None = None, unit=Literal["mm", "inch"] = "inch"
+    size: tuple[float, float],
+    ax: Axes | None = None,
+    unit: Literal["mm", "inch"] = "inch",
 ) -> None:
     valid_units = "mm", "inch"
     if unit not in valid_units:

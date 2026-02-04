@@ -1,5 +1,5 @@
 [project]
-name = "fixed_axes"
+name = "fixed_layout"
 version = "0.1.0-dev" # also update _version.py
 authors = [{ name = "Max Kircher" }]
 description = """

@@ -3,10 +3,10 @@ import matplotlib.layout_engine as mlayout
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-from ._fixed_axes_layout import do_fixed_axes_layout
+from ._fixed_layout import do_fixed_layout, validate_figure
 
 
-class FixedAxesLayoutEngine(mlayout.LayoutEngine):
+class FixedLayoutEngine(mlayout.LayoutEngine):
     _adjust_compatible = False
     _colorbar_gridspec = False
 
@@ -22,7 +22,8 @@ class FixedAxesLayoutEngine(mlayout.LayoutEngine):
         self._is_executing = True
 
         try:
-            do_fixed_axes_layout(fig)
+            validate_figure(fig)
+            do_fixed_layout(fig)
 
         finally:
             self._is_executing = False
